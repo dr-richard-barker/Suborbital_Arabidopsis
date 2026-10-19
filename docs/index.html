@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Home · NS-26 Suborbital Arabidopsis Omics</title>
+  <meta name="description" content="Rapid transcriptional reprogramming of Arabidopsis thaliana during suborbital spaceflight on Blue Origin New Shepard NS-26. Cross-mission comparative omics, interactive 3D WebGL, and FAIR data.">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://dr-richard-barker.github.io/Plant_response_to_radiation/cose/cose-theme.css">
+</head>
+<body data-site-id="suborbital-arabidopsis">
+
+<header class="site">
+  <nav>
+    <span class="brand">🚀 Suborbital Arabidopsis · NS-26</span>
+    <a href="#abstract" style="color:var(--accent)">Abstract</a>
+    <a href="#highlights">Highlights</a>
+    <a href="#figures">Figures</a>
+    <a href="#3d-viewer">3D Manifold</a>
+    <a href="#explorer">Gene Explorer</a>
+    <a href="#data">Data &amp; Code</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Suborbital Spaceflight Reveals Acute Proteotoxic &amp; Metabolic Reprogramming in <i>Arabidopsis</i></h1>
+    <p class="lede">
+      Cross-mission transcriptomic analysis of the Blue Origin New Shepard NS-26 mission 
+      (Ferl et al., <i>npj Microgravity</i> 2026, doi:10.1038/s41526-026-00645-6) integrated with 
+      Virgin Galactic Unity 22 (OSD-624) and orbital ISS baselines.
+    </p>
+    
+    <div class="badges">
+      <span class="badge status-ready">🟢 Open Access (npj Microgravity)</span>
+      <span class="badge status-ready">🟢 1,272 DEGs Harmonized</span>
+      <span class="badge status-pending">🟡 NASA OSDR: OSD-948 (Pending Indexing)</span>
+      <span class="badge status-pending">🟡 NCBI GEO: GSE312580 (Embargoed)</span>
+      <span class="badge">Blue Origin NS-26</span>
+      <span class="badge">KSC Fixation Tubes</span>
+      <span class="badge">FAIR Ready</span>
+    </div>
+
+    <div class="btnrow">
+      <a class="btn primary" href="https://doi.org/10.1038/s41526-026-00645-6" target="_blank">📄 Read npj Microgravity Paper ↗</a>
+      <a class="btn" href="#figures">Explore Figures</a>
+      <a class="btn" href="#3d-viewer">3D Cluster Viewer</a>
+      <a class="btn" href="#explorer">Interactive Gene Search</a>
+      <a class="btn" href="#data">Download FAIR Data</a>
+    </div>
+
+    <div class="note">
+      <b>Repository Availability Status:</b> The publication cites NASA OSDR study <b>OSD-948</b> and NCBI GEO <b>GSE312580</b>. 
+      As of October 18, 2026, both repository records remain in pre-release/embargo status following recent article publication. 
+      The automated repository watcher (<code>scripts/01_poll_repositories.py</code>) is actively polling the endpoints. 
+      All analyses and visualizations below derive directly from the peer-reviewed Supplementary Data matrices (MOESM1/MOESM2) and comparative OSDR datasets (OSD-624).
+    </div>
+  </section>
+
+  <h2 id="abstract">Executive Abstract</h2>
+  <div class="content">
+    <p>
+      Human-rated suborbital vehicles enable researcher-tended biological sampling during the rapid transition 
+      from Earth gravity to spaceflight microgravity and back. During the <b>Blue Origin New Shepard NS-26</b> mission 
+      (August 29, 2024), <i>Arabidopsis thaliana</i> (Col-0) seedlings housed in Kennedy Space Center Fixation Tubes (KFTs) 
+      were preserved in RNAlater at four critical flight phases: <b>Escape Enabled (EE)</b>, <b>Capsule Separation (CS)</b>, 
+      <b>Reentry (RE)</b>, and <b>Landing (LN)</b>, matched with real-time ground controls.
+    </p>
+    <p>
+      A total of <b>1,272 genes were differentially expressed</b> across flight phases, with pronounced organ-specificity: 
+      leaves mounted a response 4× stronger than roots (617 leaf DEGs vs. 119 root DEGs at microgravity reentry). 
+      Cross-mission comparison confirms <b>207 shared DEGs with Virgin Galactic Unity 22 (OSD-624)</b> and <b>83 shared DEGs with orbital ISS flights</b>. 
+      Remarkably, <b>72% of all heat stress chaperones (70/97)</b> and <b>59% of reactive oxygen species genes (178/303)</b> 
+      peak strictly during the 3.5-minute microgravity coast (RE) rather than the peak acceleration of boost (CS), 
+      demonstrating that acute proteotoxic stress is an early hallmark of entering microgravity.
+    </p>
+    <hr>
+  </div>
+
+  <h2 id="highlights">Key Re-Analysis Highlights</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Organ Divergence</h3>
+      <p>Leaves exhibit <span class="k">617 DEGs</span> at reentry vs. <span class="k">119 DEGs</span> in roots. Only 71 genes are coordinately regulated between tissues.</p>
+    </div>
+    <div class="card">
+      <h3>Microgravity Coast Peak</h3>
+      <p><span class="k">505 genes</span> define the microgravity coast archetype, capturing the vast majority of sHSPs, HSFs, and BAG chaperones.</p>
+    </div>
+    <div class="card">
+      <h3>Suborbital Concordance</h3>
+      <p><span class="k">207 DEGs</span> replicate across different launch profiles (vertical rocket NS-26 vs. horizontal air-drop Unity 22).</p>
+    </div>
+    <div class="card">
+      <h3>Non-Thermal Proteostasis</h3>
+      <p>In-suit dataloggers verified maximum temperatures <span class="k">&lt;30°C</span>, confirming chaperone induction is triggered by acute microgravity/ROS rather than heat.</p>
+    </div>
+  </div>
+
+  <h2 id="figures">Selected Re-Analysis Figures</h2>
+  <div class="gallery">
+    <figure>
+      <img src="assets/figures/fig1_phase_degs.png" alt="NS-26 Phasic Transcriptome Response in Leaves and Roots">
+      <figcaption><b>Figure 1:</b> Phasic distribution of up- and downregulated genes across Escape Enabled (EE), Capsule Separation (CS), Reentry (RE), and Landing (LN) in Leaves and Roots compared to time-matched ground controls.</figcaption>
+    </figure>
+    
+    <figure>
+      <img src="assets/figures/fig2_temporal_archetypes.png" alt="Temporal Expression Trajectory Archetypes">
+      <figcaption><b>Figure 2:</b> Continuous trajectory modeling of the 1,272 DEGs across the 10.5-minute flight timeline reveals distinct dynamic archetypes, including the dominant Microgravity Coast cohort peaking at Reentry (T+5.3m).</figcaption>
+    </figure>
+
+    <figure>
+      <img src="assets/figures/fig3_functional_enrichment.png" alt="Functional and Cross-Mission Overlap">
+      <figcaption><b>Figure 3:</b> Representation of cross-mission suborbital benchmarks (VG Unity 22), orbital spaceflight (APEX), Reactive Oxygen Species (ROS Wheel cores), and Heat Stress chaperones within the NS-26 transcriptome.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="assets/figures/fig4_hub_transcription_factors.png" alt="Regulatory Families and Chaperone Trajectories">
+      <figcaption><b>Figure 4:</b> Top regulatory families represented among NS-26 DEGs (left) and mean leaf expression trajectories of sHSP chaperones, HSFs, bHLH transcription factors, and GST redox enzymes across flight phases (right).</figcaption>
+    </figure>
+  </div>
+
+  <h2 id="3d-viewer">Interactive 3D Transcriptome Manifold</h2>
+  <div class="content">
+    <p>
+      WebGL 3D scatter projection of the 1,272 NS-26 DEGs across all flight phases (t-SNE dimensionality reduction), 
+      implementing the open-source transcriptomic visualization methodology from Strickland et al. (2025). 
+      Click, drag to rotate, scroll to zoom, and hover over individual gene points to inspect identities, functional families, and fold-changes.
+    </p>
+    <div style="border:1px solid var(--line); border-radius:12px; overflow:hidden; background:var(--card); margin:1rem 0;">
+      <iframe src="assets/interactive_3d_clusters.html" width="100%" height="600" style="border:none; display:block;"></iframe>
+    </div>
+  </div>
+
+  <h2 id="explorer">Interactive Top Responsive Genes Explorer</h2>
+  <div class="content">
+    <p>Search and filter top responsive genes by AGI Locus ID, gene symbol, functional family, or dynamic archetype:</p>
+    <input type="text" id="geneSearch" class="search-box" placeholder="🔍 Filter by Gene ID, symbol (e.g. HSP, HSF, BHLH), or archetype..." onkeyup="filterGenes()">
+    <div style="max-height:480px; overflow-y:auto; border:1px solid var(--line); border-radius:8px;">
+      <table id="geneTable" style="margin:0;">
+        <thead>
+          <tr>
+            <th>Gene ID</th>
+            <th>Symbol</th>
+            <th>Archetype</th>
+            <th>Family</th>
+            <th>CS Leaf (log₂FC)</th>
+            <th>RE Leaf (log₂FC)</th>
+            <th>LN Leaf (log₂FC)</th>
+            <th>RE Root (log₂FC)</th>
+            <th>Unity 22</th>
+            <th>Orbital</th>
+          </tr>
+        </thead>
+        <tbody id="geneTableBody">
+          <tr><td colspan="10" style="text-align:center;">Loading gene catalog...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h2 id="data">Data &amp; Code Availability</h2>
+  <div class="content">
+    <ul>
+      <li><b>Processed Master DEG Matrix:</b> <a href="../data/processed/ns26_degs_master.csv"><code>data/processed/ns26_degs_master.csv</code></a> (1,272 genes with phase fold-changes and functional flags)</li>
+      <li><b>Trajectory &amp; 3D Coordinates:</b> <a href="../data/processed/ns26_degs_trajectories.csv"><code>data/processed/ns26_degs_trajectories.csv</code></a> (Archetype annotations and 3D t-SNE coordinates)</li>
+      <li><b>Top Responsive Genes JSON:</b> <a href="assets/degs_top.json"><code>docs/assets/degs_top.json</code></a> (Tidy records for web display)</li>
+      <li><b>Automated Poller Script:</b> <a href="../scripts/01_poll_repositories.py"><code>scripts/01_poll_repositories.py</code></a> (Daemon script for OSD-948 and GSE312580 monitoring)</li>
+      <li><b>Figure Generators:</b> <a href="../scripts/04_generate_figures.py"><code>scripts/04_generate_figures.py</code></a> &amp; <a href="../scripts/05_network_hubs.py"><code>scripts/05_network_hubs.py</code></a></li>
+    </ul>
+    <p class="note">
+      <b>Citation:</b> Ferl, R.J., Strickland, H.F., Callaham, J.B. et al. Suborbital spaceflight reveals rapid changes in gene expression accompanying the transition to and from space. <i>npj Microgravity</i> 12, 86 (2026). https://doi.org/10.1038/s41526-026-00645-6.
+    </p>
+  </div>
+</main>
+
+<footer class="site">
+  Suborbital Arabidopsis Omics · Collaborative Science Environment (CoSE) ·
+  FAIR Data &amp; Code · Published under Creative Commons Attribution 4.0
+</footer>
+
+<script>
+let allGenes = [];
+fetch('assets/degs_top.json')
+  .then(res => res.json())
+  .then(data => {
+    allGenes = data;
+    renderTable(allGenes);
+  })
+  .catch(err => {
+    document.getElementById('geneTableBody').innerHTML = '<tr><td colspan="10">Error loading data.</td></tr>';
+  });
+
+function renderTable(genes) {
+  const tbody = document.getElementById('geneTableBody');
+  if (!genes || genes.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="10" style="text-align:center;">No matching genes found.</td></tr>';
+    return;
+  }
+  tbody.innerHTML = genes.slice(0, 100).map(g => `
+    <tr>
+      <td><b><a href="https://www.arabidopsis.org/servlets/TairObject?type=locus&name=${g.gene_id}" target="_blank">${g.gene_id} ↗</a></b></td>
+      <td>${g.gene_symbol || '—'}</td>
+      <td><span class="badge" style="font-size:0.75rem;">${g.leaf_trajectory_archetype}</span></td>
+      <td>${g.functional_family !== 'Other' ? `<b>${g.functional_family}</b>` : '—'}</td>
+      <td style="color:${g.l2fc_cs_leaf > 0 ? '#1f7a6f' : g.l2fc_cs_leaf < 0 ? '#d55e00' : 'inherit'}">${g.l2fc_cs_leaf !== '' ? Number(g.l2fc_cs_leaf).toFixed(2) : '—'}</td>
+      <td style="color:${g.l2fc_re_leaf > 0 ? '#1f7a6f' : g.l2fc_re_leaf < 0 ? '#d55e00' : 'inherit'}">${g.l2fc_re_leaf !== '' ? Number(g.l2fc_re_leaf).toFixed(2) : '—'}</td>
+      <td style="color:${g.l2fc_ln_leaf > 0 ? '#1f7a6f' : g.l2fc_ln_leaf < 0 ? '#d55e00' : 'inherit'}">${g.l2fc_ln_leaf !== '' ? Number(g.l2fc_ln_leaf).toFixed(2) : '—'}</td>
+      <td style="color:${g.l2fc_re_root > 0 ? '#1f7a6f' : g.l2fc_re_root < 0 ? '#d55e00' : 'inherit'}">${g.l2fc_re_root !== '' ? Number(g.l2fc_re_root).toFixed(2) : '—'}</td>
+      <td>${g.vg_unity22_deg ? '✓' : '—'}</td>
+      <td>${g.orbital_deg ? '✓' : '—'}</td>
+    </tr>
+  `).join('');
+}
+
+function filterGenes() {
+  const query = document.getElementById('geneSearch').value.toLowerCase().trim();
+  if (!query) {
+    renderTable(allGenes);
+    return;
+  }
+  const filtered = allGenes.filter(g => 
+    g.gene_id.toLowerCase().includes(query) ||
+    (g.gene_symbol && g.gene_symbol.toLowerCase().includes(query)) ||
+    (g.gene_description && g.gene_description.toLowerCase().includes(query)) ||
+    (g.functional_family && g.functional_family.toLowerCase().includes(query)) ||
+    (g.leaf_trajectory_archetype && g.leaf_trajectory_archetype.toLowerCase().includes(query))
+  );
+  renderTable(filtered);
+}
+</script>
+<script src="https://dr-richard-barker.github.io/Plant_response_to_radiation/cose/sites.js"></script>
+<script src="https://dr-richard-barker.github.io/Plant_response_to_radiation/cose/theme.js"></script>
+<script defer src="https://visitor-analytics.astrobotany.workers.dev/a.js"></script>
+</body>
+</html>

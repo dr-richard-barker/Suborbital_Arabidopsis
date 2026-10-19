@@ -1,0 +1,11 @@
+Category,Gene_Count,Percentage_of_NS26
+Total_NS26_DEGs,1272,100.0
+Shared_with_VG_Unity22,207,16.27
+Shared_with_Orbital_APEX,83,6.53
+Heat_Stress_Associated,97,7.63
+ROS_All_Associated,303,23.82
+ROS_Core_III,101,7.94
+ROS_Core_IV,9,0.71
+Cell_Wall_Associated,70,5.5
+Housekeeping_Negative_Control,2,0.16
+Flowering_Negative_Control,2,0.16

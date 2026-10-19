@@ -1,0 +1,49 @@
+cff-version: 1.2.0
+message: "If you use this dataset, re-analysis pipeline, or presentation system, please cite it as below."
+title: "Suborbital Arabidopsis: Cross-Mission Omics and Trajectory Modeling of Blue Origin NS-26"
+abstract: "Re-analysis and multi-mission comparative transcriptomics of Arabidopsis thaliana seedlings during suborbital spaceflight on Blue Origin New Shepard NS-26, cross-referenced with Virgin Galactic Unity 22 (OSD-624) and orbital ISS baselines."
+type: dataset
+version: 1.0.0
+date-released: 2026-10-18
+license: MIT
+authors:
+  - family-names: Barker
+    given-names: Richard
+    email: dr.richard.barker@gmail.com
+    affiliation: "Collaborative Science Environment Inc. (CoSE), Madison, WI, USA"
+repository-code: "https://github.com/dr-richard-barker/Suborbital_Arabidopsis"
+url: "https://dr-richard-barker.github.io/Suborbital_Arabidopsis/"
+keywords:
+  - "Arabidopsis thaliana"
+  - "Suborbital spaceflight"
+  - "Blue Origin New Shepard NS-26"
+  - "Virgin Galactic Unity 22"
+  - "NASA OSDR"
+  - "Microgravity"
+  - "Proteotoxic stress"
+  - "Transcriptomics"
+  - "CoSE"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Ferl
+      given-names: "Robert J."
+    - family-names: Strickland
+      given-names: "Hunter F."
+    - family-names: Callaham
+      given-names: "Jordan B."
+    - family-names: Aknadibossian
+      given-names: Vicken
+    - family-names: Marr
+      given-names: Owen
+    - family-names: Adhikari
+      given-names: Paula
+    - family-names: Paul
+      given-names: "Anna-Lisa"
+  title: "Suborbital spaceflight reveals rapid changes in gene expression accompanying the transition to and from space"
+  journal: "npj Microgravity"
+  volume: 12
+  issue: 1
+  article-number: 86
+  year: 2026
+  doi: "10.1038/s41526-026-00645-6"

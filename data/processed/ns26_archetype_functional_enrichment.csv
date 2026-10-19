@@ -1,0 +1,7 @@
+leaf_trajectory_archetype,total_genes,heat_genes,ros_genes,vg_shared,orbital_shared
+Landing_Touchdown_Shock,254,8,38,19,8
+Microgravity_Coast_Responsive,505,70,178,126,39
+Progressive_Adaptive,41,1,5,3,2
+Root_Dominant,127,6,25,25,11
+Sustained_Transition,47,1,9,9,6
+Transient_Boost_Shock,298,11,48,25,17

@@ -1,0 +1,9 @@
+condition,organ,phase,total_degs,upregulated,downregulated
+EE Leaf,Leaf,EE,71,62,9
+CS Leaf,Leaf,CS,564,484,80
+RE Leaf,Leaf,RE,617,495,122
+LN Leaf,Leaf,LN,389,328,61
+EE Root,Root,EE,2,1,1
+CS Root,Root,CS,135,99,36
+RE Root,Root,RE,119,96,23
+LN Root,Root,LN,12,10,2

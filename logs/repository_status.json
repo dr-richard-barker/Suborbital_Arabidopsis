@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-10-18T21:04:38.601524",
+  "osdr_948_public": false,
+  "geo_312580_public": false,
+  "osdr_data": {
+    "hits": 0,
+    "input": "948",
+    "study": {},
+    "success": true
+  },
+  "geo_data": {
+    "header": {
+      "type": "esearch",
+      "version": "0.3"
+    },
+    "esearchresult": {
+      "count": "0",
+      "retmax": "0",
+      "retstart": "0",
+      "idlist": [],
+      "translationset": [],
+      "querytranslation": "(GSE312580[ACCN])",
+      "errorlist": {
+        "phrasesnotfound": [
+          "GSE312580[ACCN]"
+        ],
+        "fieldsnotfound": []
+      },
+      "warninglist": {
+        "phrasesignored": [],
+        "quotedphrasesnotfound": [],
+        "outputmessages": [
+          "No items found."
+        ]
+      }
+    }
+  }
+}
