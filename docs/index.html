@@ -15,6 +15,7 @@
     <span class="brand">🚀 Suborbital Arabidopsis · NS-26</span>
     <a href="#abstract" style="color:var(--accent)">Abstract</a>
     <a href="#highlights">Highlights</a>
+    <a href="#physiospace" style="font-weight:bold; color:#b2182b;">PhysioSpace Decoder</a>
     <a href="#figures">Figures</a>
     <a href="#3d-viewer">3D Manifold</a>
     <a href="#explorer">Gene Explorer</a>
@@ -97,6 +98,55 @@
     </div>
   </div>
 
+  <h2 id="physiospace">PhysioSpace Stress Autodecoder: Deconstructing the Flight Profile</h2>
+  <div class="content">
+    <p>
+      To understand how plants physiologically experience each phase of the suborbital profile, we applied the 
+      <b>Plant PhysioSpace stress autodecoder</b> (Hadizadeh Esfahani et al. 2021; Lenz et al. 2013). By projecting the differential expression 
+      vectors of each mission phase onto the canonical 20-axis <i>Arabidopsis</i> reference stress space (<code>AT_Stress_Space</code>, 22,729 genes), 
+      we resolve the complex transcriptome into standardized <b>PhysioScores</b> ranging from <b>-1.0 (blue, suppressed)</b> to <b>+1.0 (red, induced)</b>.
+    </p>
+
+    <div style="background:var(--card); border:1px solid var(--line); border-radius:12px; padding:1.5rem; margin:1.5rem 0; text-align:center;">
+      <a href="assets/figures/fig5_physiospace_stress_heatmap.png" target="_blank">
+        <img src="assets/figures/fig5_physiospace_stress_heatmap.png" alt="Figure 5: PhysioSpace Stress Pattern Autodecoding across the Suborbital Flight Profile" style="max-width:100%; height:auto; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+      </a>
+      <p style="font-size:0.95rem; color:var(--text-muted); margin-top:0.75rem; text-align:left;">
+        <b>Figure 5: PhysioSpace Stress Pattern Autodecoding across the Suborbital Flight Profile.</b> 
+        Dynamic activation and repression of 20 canonical stress axes across Leaves and Roots during Escape Enabled (EE, ~2.5m), 
+        Capsule Separation (CS, ~4m), Reentry Coast (RE, ~7.5m), and Landing (LN, ~10m), benchmarked against Virgin Galactic Unity 22 (* p&lt;0.05, ** p&lt;0.01, *** p&lt;0.001). 
+        Color scale: <b>(Low) Deep Blue = Suppressed Program ↔ White = Baseline ↔ (High) Crimson Red = Induced Program</b>.
+      </p>
+    </div>
+
+    <h3>Physiological Deconvolution Across Flight Events</h3>
+    <div class="cards" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-bottom:1.5rem;">
+      <div class="card" style="border-left: 4px solid #1f77b4;">
+        <h4>1. Ascent &amp; Hyper-g (EE, ~2.5m)</h4>
+        <p><b>Selective Protection:</b> Leaves show early heat (+0.55**) and drought (+0.59**) sensing, but significantly <i>suppress</i> wounding (-0.55**), genotoxic (-0.55**), and radiation (-0.51**) pathways. Roots remain transcriptomically quiescent.</p>
+      </div>
+      <div class="card" style="border-left: 4px solid #d62728;">
+        <h4>2. Microgravity Onset (CS, ~4m)</h4>
+        <p><b>Rhizosphere Hypoxia Surge:</b> Within 90s of weightlessness, roots mount acute <b>Hypoxia</b> (+0.47***), <b>Salt</b> (+0.75***), and <b>Osmotic</b> (+0.42**) programs, confirming fluid stagnation and oxygen diffusion limitation in the rhizosphere.</p>
+      </div>
+      <div class="card" style="border-left: 4px solid #ff7f0e;">
+        <h4>3. Apogee Free-Fall (RE, ~7.5m)</h4>
+        <p><b>Peak Proteotoxic Stress:</b> Extended microgravity coast triggers maximum <b>Heat shock chaperone activation</b> in leaves (+0.77***) and roots (+0.74***). Roots initiate mechanosensitive wounding (+0.43**) during re-entry deceleration.</p>
+      </div>
+      <div class="card" style="border-left: 4px solid #2ca02c;">
+        <h4>4. Touchdown Impact (LN, ~10m)</h4>
+        <p><b>Mechanical Shock Burst:</b> Touchdown impact drives peak wounding (+0.78), osmotic (+0.89), and oxidative stress (+0.78) in roots, while leaf stress responses rapidly de-escalate upon return to terrestrial 1g.</p>
+      </div>
+    </div>
+
+    <div class="btnrow" style="margin:1rem 0;">
+      <a class="btn primary" href="results_and_discussion_rewritten.md" target="_blank">📖 Read Full Rewritten Results &amp; Discussion (Markdown) ↗</a>
+      <a class="btn" href="assets/data/ns26_physiospace_scores.csv" download>📥 Download Decoded PhysioScores (CSV)</a>
+      <a class="btn" href="assets/data/ns26_physiospace_long.csv" download>📥 Download Complete Tidy Matrix (CSV)</a>
+    </div>
+    <hr>
+  </div>
+
   <h2 id="figures">Selected Re-Analysis Figures</h2>
   <div class="gallery">
     <figure>
@@ -162,9 +212,13 @@
   <h2 id="data">Data &amp; Code Availability</h2>
   <div class="content">
     <ul>
-      <li><b>Processed Master DEG Matrix:</b> <a href="../data/processed/ns26_degs_master.csv"><code>data/processed/ns26_degs_master.csv</code></a> (1,272 genes with phase fold-changes and functional flags)</li>
+      <li><b>PhysioSpace Decoded Score Matrix:</b> <a href="assets/data/ns26_physiospace_scores.csv"><code>data/processed/ns26_physiospace_scores.csv</code></a> (20 reference stress axes across 8 flight phases + Unity 22)</li>
+      <li><b>PhysioSpace Complete Tidy Table:</b> <a href="assets/data/ns26_physiospace_long.csv"><code>data/processed/ns26_physiospace_long.csv</code></a> (Full table with normalized statistics, p-values, FDR, and gene counts)</li>
+      <li><b>Rewritten Results &amp; Discussion:</b> <a href="results_and_discussion_rewritten.md"><code>docs/results_and_discussion_rewritten.md</code></a> (Full standalone manuscript narrative)</li>
+      <li><b>Processed Master DEG Matrix:</b> <a href="assets/data/ns26_degs_master.csv"><code>data/processed/ns26_degs_master.csv</code></a> (1,272 genes with phase fold-changes and functional flags)</li>
       <li><b>Trajectory &amp; 3D Coordinates:</b> <a href="../data/processed/ns26_degs_trajectories.csv"><code>data/processed/ns26_degs_trajectories.csv</code></a> (Archetype annotations and 3D t-SNE coordinates)</li>
-      <li><b>Top Responsive Genes JSON:</b> <a href="assets/degs_top.json"><code>docs/assets/degs_top.json</code></a> (Tidy records for web display)</li>
+      <li><b>PhysioSpace Decoder Pipeline:</b> <a href="../scripts/06_physiospace_decode.py"><code>scripts/06_physiospace_decode.py</code></a> (Mann-Whitney rank-sum projection engine)</li>
+      <li><b>PhysioSpace Heatmap Generator:</b> <a href="../scripts/07_plot_physiospace_heatmap.py"><code>scripts/07_plot_physiospace_heatmap.py</code></a> (Blue-to-White-to-Red publication generator)</li>
       <li><b>Automated Poller Script:</b> <a href="../scripts/01_poll_repositories.py"><code>scripts/01_poll_repositories.py</code></a> (Daemon script for OSD-948 and GSE312580 monitoring)</li>
       <li><b>Figure Generators:</b> <a href="../scripts/04_generate_figures.py"><code>scripts/04_generate_figures.py</code></a> &amp; <a href="../scripts/05_network_hubs.py"><code>scripts/05_network_hubs.py</code></a></li>
     </ul>
