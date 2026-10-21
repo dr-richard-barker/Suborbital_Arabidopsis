@@ -1,0 +1,20 @@
+gene_id,gene_symbol,gene_description,l2fc_ee_leaf,l2fc_cs_leaf,l2fc_re_leaf,l2fc_ln_leaf,l2fc_ee_root,l2fc_cs_root,l2fc_re_root,l2fc_ln_root,vg_unity22_deg,orbital_deg,heat_stress,ros_all,rc_1,rc_2,rc_3,rc_4,rc_5,rc_6,rc_7,rc_8,cell_wall,housekeeping,flowering,cluster_id
+AT1G69940,PPME1,Pectinesterase PPME1,5.048137243,,,,,,,,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,312
+AT1G02920,GSTF7,Glutathione S-transferase F7,-1.021298674,,,,,,,,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,1081
+AT1G48020,PMEI1,Pectinesterase inhibitor 1,2.051033665,,1.505000567,2.089207843,,,,,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,137
+AT1G55010,PDF1.5,Defensin-like protein 18,,,,1.573907144,,,,,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,200
+AT1G80590,WRKY66,Probable WRKY transcription factor 66,,,,1.236116002,,,,,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,180
+AT2G44745,WRKY12,At2g44745,,,,1.122003339,,,,,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,166
+AT4G22070,WRKY31,Probable WRKY transcription factor 31,,,,-2.952461695,,,,,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,1234
+AT2G14610,PR1,Pathogenesis-related protein 1,,,,-4.158164425,,,,,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,1199
+AT2G47030,PME4,Pectinesterase 4,,,4.330295419,,,,,,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,926
+AT2G29470,GSTU3,Glutathione S-transferase U3,,,2.671095693,,,,,,False,True,False,True,False,False,False,False,False,False,False,False,False,False,False,912
+AT1G64195,,Defensin-like protein 35,,,2.343469229,,,,,,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,963
+AT1G68905,,Putative defensin-like protein 262,,,1.315321509,,,,,,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,957
+AT2G46400,WRKY46,Probable WRKY transcription factor 46,,,1.203059487,,,,,,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,924
+AT2G41480,PER25,Peroxidase 25,,,-1.03281474,,,,,,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,14
+AT2G40750,WRKY54,Probable WRKY transcription factor 54,,,-1.08471476,,,,,,False,True,False,True,False,False,True,False,False,False,False,False,False,False,False,13
+AT4G11290,PER39,Peroxidase 39,,,-1.207306988,,,,,,True,False,True,False,False,False,False,False,False,False,False,False,False,False,False,67
+AT3G01080,WRKY58,WRKY DNA-binding protein 58,,,-1.513992611,,,,,,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,15
+AT1G68850,PER11,Peroxidase 11,,,-3.368437252,,,,,,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,22
+AT4G02520,GSTF2,Glutathione S-transferase F2,,,1.635648245,1.867764937,,,,,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,383

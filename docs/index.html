@@ -15,7 +15,8 @@
     <span class="brand">🚀 Suborbital Arabidopsis · NS-26</span>
     <a href="#abstract" style="color:var(--accent)">Abstract</a>
     <a href="#highlights">Highlights</a>
-    <a href="#physiospace" style="font-weight:bold; color:#b2182b;">PhysioSpace Decoder</a>
+    <a href="#physiospace" style="font-weight:bold; color:#b2182b;">PhysioSpace</a>
+    <a href="#phyllobiome" style="font-weight:bold; color:#2e7d32;">Phyllobiome</a>
     <a href="#figures">Figures</a>
     <a href="#3d-viewer">3D Manifold</a>
     <a href="#explorer">Gene Explorer</a>
@@ -147,6 +148,54 @@
     <hr>
   </div>
 
+  <h2 id="phyllobiome">Phyllobiome &amp; Host-Microbe Dynamics Across the Mission Profile</h2>
+  <div class="content">
+    <p>
+      Plants in spaceflight function as <b>holobionts</b>—intricate partnerships between the plant host and its endophytic and foliar microbiome (the <b>phyllobiome</b>). 
+      During suborbital flight, the rapid cessation of gravity-driven air and fluid convection alters boundary-layer moisture, gas exchange, and volatile dissipation on plant leaves. 
+      By combining host immune pathway profiling with metatranscriptomic unmapped-read mining architectures, we resolve how host-microbe equilibrium shifts across the flight timeline.
+    </p>
+
+    <div style="background:var(--card); border:1px solid var(--line); border-radius:12px; padding:1.5rem; margin:1.5rem 0; text-align:center;">
+      <a href="assets/figures/fig6_phyllobiome_dynamics.png" target="_blank">
+        <img src="assets/figures/fig6_phyllobiome_dynamics.png" alt="Figure 6: Phyllobiome Immune Surveillance &amp; Host-Microbe Dynamics Across Suborbital Flight Phases" style="max-width:100%; height:auto; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+      </a>
+      <p style="font-size:0.95rem; color:var(--text-muted); margin-top:0.75rem; text-align:left;">
+        <b>Figure 6: Phyllobiome Immune Surveillance &amp; Host-Microbe Dynamics Across Suborbital Flight Phases.</b> 
+        <b>(A)</b> PhysioSpace trajectories for <i>Biotic</i> (pathogen) and <i>Biotic.Hormone</i> (SA/JA) axes in Leaves vs. Roots. 
+        <b>(B)</b> Log2 fold changes of 19 key host defense, antimicrobial defensin, and cell-wall pectin integrity loci (<i>PPME1</i>, <i>PME4</i>, <i>PDF1.5</i>, <i>PR1</i>, <i>WRKY</i>s). 
+        <b>(C)</b> Suborbital metatranscriptomic unmapped-read extraction pipeline (STAR unmapped filter → Kraken2/Bracken taxonomic classification). 
+        <b>(D)</b> Prevalence of recurring core plant endophyte and phyllosphere bacterial taxa across 5 historical NASA OSDR seedling flight studies.
+      </p>
+    </div>
+
+    <h3>Key Phyllobiome &amp; Host-Microbe Discoveries</h3>
+    <div class="cards" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-bottom:1.5rem;">
+      <div class="card" style="border-left: 4px solid #4caf50;">
+        <h4>Launch Hardening (EE, ~2.5m)</h4>
+        <p>Vibration and hyper-g trigger massive cell-wall pectin remodeling (<b>PPME1</b> +5.05, <b>PMEI1</b> +2.05), while broad pathogen defenses are suppressed (-0.49**) to prioritize structural resilience.</p>
+      </div>
+      <div class="card" style="border-left: 4px solid #ff9800;">
+        <h4>Capsule Separation Surge (CS, ~4m)</h4>
+        <p>Weightlessness onset halts natural convection, causing an immediate foliar immune burst (<b>Biotic.Hormone</b> +0.49***) in leaves, contrasted with root defense suppression (-0.27*) during rhizosphere hypoxia.</p>
+      </div>
+      <div class="card" style="border-left: 4px solid #9c27b0;">
+        <h4>Antimicrobial Coast (RE, ~7.5m)</h4>
+        <p>Apogee free-fall stimulates antimicrobial defensin peptides (<b>PDF-like 35</b> +2.34, <b>PDF-like 262</b> +1.32) and master regulator <b>WRKY46</b> (+1.20) as the host modulates its endophytes.</p>
+      </div>
+      <div class="card" style="border-left: 4px solid #f44336;">
+        <h4>Touchdown Decoupling (LN, ~10m)</h4>
+        <p>Landing impact triggers mechanical root wounding (+0.78) and decouples salicylic acid defenses (<b>PR1</b> plunges -4.16) while jasmonate-linked defensins (<b>PDF1.5</b> +1.57) remain active.</p>
+      </div>
+    </div>
+
+    <div class="btnrow" style="margin:1rem 0;">
+      <a class="btn primary" href="phyllobiome_analysis.md" target="_blank">🔬 Read Complete Phyllobiome Analysis Report (Markdown) ↗</a>
+      <a class="btn" href="assets/data/ns26_phyllobiome_defense_genes.csv" download>📥 Download Host Phyllobiome Defense Genes (CSV)</a>
+    </div>
+    <hr>
+  </div>
+
   <h2 id="figures">Selected Re-Analysis Figures</h2>
   <div class="gallery">
     <figure>
@@ -214,9 +263,12 @@
     <ul>
       <li><b>PhysioSpace Decoded Score Matrix:</b> <a href="assets/data/ns26_physiospace_scores.csv"><code>data/processed/ns26_physiospace_scores.csv</code></a> (20 reference stress axes across 8 flight phases + Unity 22)</li>
       <li><b>PhysioSpace Complete Tidy Table:</b> <a href="assets/data/ns26_physiospace_long.csv"><code>data/processed/ns26_physiospace_long.csv</code></a> (Full table with normalized statistics, p-values, FDR, and gene counts)</li>
+      <li><b>Host Phyllobiome Defense Genes:</b> <a href="assets/data/ns26_phyllobiome_defense_genes.csv"><code>data/processed/ns26_phyllobiome_defense_genes.csv</code></a> (Key PR1, defensins, WRKYs, and pectin loci)</li>
+      <li><b>Phyllobiome Scientific Report:</b> <a href="phyllobiome_analysis.md"><code>docs/phyllobiome_analysis.md</code></a> (Full report on host immunity and unmapped-read metatranscriptomics)</li>
       <li><b>Rewritten Results &amp; Discussion:</b> <a href="results_and_discussion_rewritten.md"><code>docs/results_and_discussion_rewritten.md</code></a> (Full standalone manuscript narrative)</li>
       <li><b>Processed Master DEG Matrix:</b> <a href="assets/data/ns26_degs_master.csv"><code>data/processed/ns26_degs_master.csv</code></a> (1,272 genes with phase fold-changes and functional flags)</li>
       <li><b>Trajectory &amp; 3D Coordinates:</b> <a href="../data/processed/ns26_degs_trajectories.csv"><code>data/processed/ns26_degs_trajectories.csv</code></a> (Archetype annotations and 3D t-SNE coordinates)</li>
+      <li><b>Phyllobiome Analysis Script:</b> <a href="../scripts/08_phyllobiome_analysis.py"><code>scripts/08_phyllobiome_analysis.py</code></a> (Figure 6 generator and host-microbe dynamics)</li>
       <li><b>PhysioSpace Decoder Pipeline:</b> <a href="../scripts/06_physiospace_decode.py"><code>scripts/06_physiospace_decode.py</code></a> (Mann-Whitney rank-sum projection engine)</li>
       <li><b>PhysioSpace Heatmap Generator:</b> <a href="../scripts/07_plot_physiospace_heatmap.py"><code>scripts/07_plot_physiospace_heatmap.py</code></a> (Blue-to-White-to-Red publication generator)</li>
       <li><b>Automated Poller Script:</b> <a href="../scripts/01_poll_repositories.py"><code>scripts/01_poll_repositories.py</code></a> (Daemon script for OSD-948 and GSE312580 monitoring)</li>
